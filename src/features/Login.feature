@@ -15,3 +15,20 @@ Feature: Login Feature
       | UserName    | Password   |
       | abc@xyz.com | Abc!1232   |
       | pqr@xyz.com | Abc@1232   |
+      
+      
+      
+  @NegativeLogin @Sanity
+  Scenario Outline: Verify that when user enters correct user name and password they should not be able to login successfully
+    Given User has opened the Simplilearn application
+    And User click on the Login Link
+    When User enters correct username "<UserName>"
+    And User enters correct password "<Password>"
+    And User clicks on Login button
+    Then User should be landed on the home Page
+    And User should be able to see the welcome message
+
+    Examples: 
+      | UserName    			| Password   |
+      | negative1@xyz.com | Abc!1232   |
+      | negative2@xyz.com | Abc@1232   |

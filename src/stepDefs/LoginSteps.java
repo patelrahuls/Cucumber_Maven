@@ -1,4 +1,4 @@
-package stefDefs;
+package stepDefs;
 
 import java.util.concurrent.TimeUnit;
 
@@ -15,16 +15,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import junit.framework.Assert;
 
-public class LoginSteps {
-
-	WebDriver driver;
+public class LoginSteps{
+	
+	WebDriver driver = BaseClass.driver;
 
 	@Given("^User has opened the Simplilearn application$")
 	public void user_has_opened_the_simplilearn_application() {
-
-		System.setProperty("webdriver.chrome.driver", "chromedriver");
-
-		driver = new ChromeDriver();
 
 		driver.get("https://www.Simplilearn.com");
 
