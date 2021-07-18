@@ -1,3 +1,4 @@
+@LoginFeature
 Feature: Login Feature
   Description: This feature will be used to login to Simplilearn Application
 
@@ -14,7 +15,7 @@ Feature: Login Feature
     Examples: 
       | UserName    | Password   |
       | abc@xyz.com | Abc!1232   |
-      | pqr@xyz.com | Abc@1232   |
+      #| pqr@xyz.com | Abc@1232   |
       
       
       
@@ -31,4 +32,4 @@ Feature: Login Feature
     Examples: 
       | UserName    			| Password   |
       | negative1@xyz.com | Abc!1232   |
-      | negative2@xyz.com | Abc@1232   |
+      #| negative2@xyz.com | Abc@1232   |
