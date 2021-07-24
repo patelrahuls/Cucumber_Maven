@@ -10,9 +10,9 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		
 		monochrome=true,
-		plugin={"pretty"},//,"html:target/cucumber.html"},
+		plugin={"pretty","html:target/cucumber.html","json:target/cucumber.json"},
 		features = "src/test/java/features",
-		tags = {"@DataTable"}, // For Running both these tags
+		tags = {"@SignUp"}, // For Running both these tags
 		//tags = {"@NegativeLogin","@Sanity"},		// For Running scenarios having both of these tags must
 		//tags = {"@FbSignUp","~@NegativeLoging"},		// For Running scenarios having both of these tags must
 		glue = {"stepDefs"}
